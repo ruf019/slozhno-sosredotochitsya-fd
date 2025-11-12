@@ -81,7 +81,7 @@
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  gap: 10px;
 }
 
 .header__theme-menu-button {
@@ -130,6 +130,10 @@
   line-height: var(--line-height-main);
 }
 
+.title_regular {
+  font-weight: 400;
+}
+
 .title-decor {
   color: var(--dark-color);
   background-color: var(--accent-color);
@@ -155,7 +159,7 @@
   color: var(--accent-color);
 }
 
-.section__list {
+.section__content {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -180,31 +184,18 @@
   outline: 1px solid var(--light-color);
 }
 
-.card__list {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 10px;
-  margin-block-end: 30px;
-}
-
-.card__item {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
-.card__subtitle {
-  margin-block-start: 10px;
-}
-
-.card__image-wrapper {
+.gallery__images {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+  margin-block-start: -10px;
 }
 
-.card__image {
+.gallery__image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .footer {
@@ -224,7 +215,7 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
   .header {
     padding: 20px;
     grid-template-columns: 1fr 1fr;
@@ -269,15 +260,78 @@
     padding-inline: 20px;
   }
 
-  .section_distractions .section__title {
+  .distractions .section__title {
     grid-column: 1 / 2;
     grid-row: 1;
   }
 
-  .section_distractions .section__list {
+  .distractions .section__content {
     grid-column: 1 / 3;
     grid-row: 2;
   }
 
-  
+  .gallery .gallery__title {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .gallery .section__content {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  .gallery__images-list {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+      'sunset sunset ice-cream'
+      'tape books ice-cream'
+      'tape street street';
+  }
+
+  .sunset-image {
+    grid-area: sunset;
+  }
+
+  .ice-cream-image {
+    grid-area: ice-cream;
+  }
+
+  .tape-image {
+    grid-area: tape;
+  }
+
+  .books-image {
+    grid-area: books;
+  }
+
+  .street-image {
+    grid-area: street;
+  }
+}
+
+@media (width >= 1024px) {
+  :root {
+    --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  }
+
+  .header__theme-menu {
+    grid-column: 1 / 3;
+    align-self: start;
+    justify-content: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .section {
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+
+  .distractions .section__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
