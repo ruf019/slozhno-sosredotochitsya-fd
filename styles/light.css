@@ -9,4 +9,46 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-image: url('../images/cover-image-light.png');
+  --header-bg-color: #FFF1F7;
+  --main-bg-color: var(--header-bg-color);
+
+  --dark-color: #353430;
+  --accent-color: #FF8DCB;
+  --accent-color-alt: #FFC2E6;
+
+  --section-title-color: var(--dark-color);
+  --main-text-color: var(--dark-color);
+  --button-hover-color: rgba(50, 49, 45, 0.4);
+  --button-focus-color: var(--dark-color);
+  --decoration-element-color: var(--dark-color);
 }
+
+:root.theme-light .header__rec {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Дублируем только те же переменные, что и выше */
+    --bg-image: url('../images/cover-image-light.png');
+    --header-bg-color: #FFF1F7;
+    --main-bg-color: var(--header-bg-color);
+
+    --dark-color: #353430;
+    --accent-color: #FF8DCB;
+    --accent-color-alt: #FFC2E6;
+
+    --section-title-color: var(--dark-color);
+    --main-text-color: var(--dark-color);
+    --button-hover-color: rgba(50, 49, 45, 0.4);
+    --button-focus-color: var(--dark-color);
+    --decoration-element-color: var(--dark-color);
+  }
+
+  /* Остальные стили, только при необходимости */
+  .header__rec {
+    display: none;
+  }
+}
+

@@ -1,11 +1,19 @@
 :root {
   --bg-image: url('../images/cover-image-dark.png');
-  --header-bg-color: #000c2f;
-  
-  --dark-color: #000028;
-  --light-color: #f1b2ce;
+  --header-bg-color: #000028;
+  --main-bg-color: var(--header-bg-color);
+
+  --dark-color: var(--header-bg-color);
   --accent-color: #ff0070;
   --accent-color-alt: #db00ff;
+
+  --section-title-color: var(--accent-color);
+  --main-text-color: #f1b2ce;
+  --link-hover-color: var(--main-text-color);
+  --button-hover-color: rgb(255 0 112 / 0.4);
+  --button-focus-color: var(--accent-color);
+  --decoration-element-color: var(--accent-color);
+
 
   --font-family-main: 'IBM PLex mono';
   --font-size-main: 18px;
