@@ -20,6 +20,7 @@
   --section-title-color: var(--accent-color);
   --main-text-color: #f1b2ce;
   --link-hover-color: var(--main-text-color);
+  --button-color: var(--accent-color);
   --button-hover-color: rgb(255 0 112 / 0.4);
   --button-focus-color: var(--accent-color);
   --decoration-element-color: var(--accent-color);

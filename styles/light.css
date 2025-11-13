@@ -10,7 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-image: url('../images/cover-image-light.png');
-  --header-bg-color: #FFF1F7;
+  --header-bg-color: #ffeef6;
   --main-bg-color: var(--header-bg-color);
 
   --dark-color: #353430;
@@ -19,6 +19,7 @@
 
   --section-title-color: var(--dark-color);
   --main-text-color: var(--dark-color);
+  --button-color: var(--dark-color);
   --button-hover-color: rgba(50, 49, 45, 0.4);
   --button-focus-color: var(--dark-color);
   --decoration-element-color: var(--dark-color);
@@ -32,7 +33,7 @@
   :root {
     /* Дублируем только те же переменные, что и выше */
     --bg-image: url('../images/cover-image-light.png');
-    --header-bg-color: #FFF1F7;
+    --header-bg-color: #ffeef6;
     --main-bg-color: var(--header-bg-color);
 
     --dark-color: #353430;
@@ -41,6 +42,7 @@
 
     --section-title-color: var(--dark-color);
     --main-text-color: var(--dark-color);
+    --button-color: var(--dark-color);
     --button-hover-color: rgba(50, 49, 45, 0.4);
     --button-focus-color: var(--dark-color);
     --decoration-element-color: var(--dark-color);
